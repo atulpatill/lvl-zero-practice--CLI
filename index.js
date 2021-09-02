@@ -16,6 +16,7 @@ function play(question, answer){
     console.log( "your score is " + score)
   }else{
     console.log("ohh, you are wrong")
+    console.log("your score is " + score)
   }
 }
 
@@ -34,6 +35,14 @@ questionThree = {
   answer: "mumbai"
 }
 
-play(questionOne.question,questionOne.answer)
-play(questionTwo.question,questionTwo.answer)
-play(questionThree.question,questionTwo.answer)
+// play(questionOne.question,questionOne.answer)
+// play(questionTwo.question,questionTwo.answer)
+// play(questionThree.question,questionTwo.answer)
+
+
+questions = [questionOne, questionTwo, questionThree]
+
+for(let i=0; i<questions.length ; i++){
+  var currentQuestion = questions[i]
+  play(currentQuestion.question, currentQuestion.answer)
+}
